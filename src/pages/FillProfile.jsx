@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 import { completeProfileData } from "../utils/authApi";
+import img1 from "../assets/images/google.png";
+import img2 from "../assets/images/facebook.png";
 
 const FillProfile = () => {
   const navigate = useNavigate();
@@ -75,10 +77,6 @@ const FillProfile = () => {
           <div className="row">
             <div
               className="col-lg-5 col-md-12 bg-img"
-              style={{
-                background: "url(images/signup2.png)",
-                backgroundSize: "cover",
-              }}
             ></div>
             <div className="col-lg-7 col-md-12 form-section">
               <div className="login-inner-form">
@@ -141,10 +139,10 @@ const FillProfile = () => {
                   </p>
                   <div className="d-flex justify-content-between">
                     <button className="btn btn-social">
-                      <img src="images/google.png" alt="Google" /> Google
+                      <img src={img1} alt="Google" /> Google
                     </button>
                     <button className="btn btn-social">
-                      <img src="images/facebook.png" alt="Facebook" /> Facebook
+                      <img src={img2} alt="Facebook" /> Facebook
                     </button>
                   </div>
                   <p className="text-center mt-3">

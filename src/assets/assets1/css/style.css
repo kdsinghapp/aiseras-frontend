@@ -184,6 +184,18 @@ body {
     padding: 30px;
 }
 
+.login-1 .test-verify{
+    background: url(../../images/signup2.png) top left repeat;
+    background-size: cover;
+    z-index: 999;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
 .login-1 .bg-img:before {
     position: absolute;
     content: '';

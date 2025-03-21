@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { verificationOtpEmail } from "../utils/authApi";
+import img1 from "../assets/images/google.png";
+import img2 from "../assets/images/facebook.png";
 import Cookies from "js-cookie";
 
 const VerificationMail = () => {
@@ -55,15 +57,11 @@ const VerificationMail = () => {
   return (
     <>
       <div className="page_loader" />
-      <div className="login-30 tab-box">
+      <div className="login-30 test-verify tab-box">
         <div className="container-fluid">
           <div className="row">
             <div
               className="col-lg-5 col-md-12 bg-img"
-              style={{
-                background: "url(images/signup1.png)",
-                backgroundSize: "cover",
-              }}
             ></div>
             <div className="col-lg-7 col-md-12 form-section">
               <div className="login-inner-form">
@@ -120,10 +118,10 @@ const VerificationMail = () => {
                   </p>
                   <div className="d-flex justify-content-between">
                     <button className="btn btn-social">
-                      <img src="images/google.png" alt="Google" /> Google
+                      <img src={img1} alt="Google" /> Google
                     </button>
                     <button className="btn btn-social">
-                      <img src="images/facebook.png" alt="Facebook" /> Facebook
+                      <img src={img2} alt="Facebook" /> Facebook
                     </button>
                   </div>
                   <p className="text-center mt-3">
