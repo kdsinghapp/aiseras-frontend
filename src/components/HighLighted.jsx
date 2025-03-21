@@ -24,7 +24,7 @@ const HighLighted = () => {
         </div>
         {/*Section header*/}
         <div className="row">
-          <div className="col-md-6 text-start">
+          <div className="col-md-6 text-start" style={{color:"white"}}>
             <p className="mb-5">
               Recognized with <br />
               Custom AI Tools

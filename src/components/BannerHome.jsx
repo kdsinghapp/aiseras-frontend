@@ -5,7 +5,7 @@ import img3 from "../assets/images/group.png";
 
 const BannerHome = () => {
   return (
-    <section className="banner__section banner__section__five bannerbg">
+    <section className="banner__section banner__section__five bannerbg" style={{color:"white"}}>
       {/*Container*/}
       <div className="container">
         <div className="banner__wrapper">

@@ -12,8 +12,12 @@ import img5 from "../assets/images/3d-head.png";
 import img6 from "../assets/images/image-3.png";
 import img7 from "../assets/images/image-4.png";
 import img8 from "../assets/images/activity_zone.png";
+import Cookies from "js-cookie";
 
 const Home = () => {
+  const userData = Cookies.get("user") ? JSON.parse(Cookies.get("user")) : null;
+  console.log(userData);
+
   return (
     <>
       {/* Header top Here */}
@@ -22,7 +26,7 @@ const Home = () => {
       {/* Banner Here */}
       <BannerHome />
       {/* Banner End */}
-      <section className="pt-5">
+      <section className="pt-5" style={{ color: "white" }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="text-left col-lg-3 col-4">
@@ -110,7 +114,7 @@ const Home = () => {
                     Empower Your Vision with <br />
                     AI Technology
                   </h3>
-                  <p className="mb-5">
+                  <p className="mb-5" style={{ color: "white" }}>
                     <small>
                       From generating complex algorithms to simple AI-driven
                       tools, we offer <br />

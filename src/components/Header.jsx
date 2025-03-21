@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../assets/assets/img/logo/logo.png";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const userData = Cookies.get("user") ? JSON.parse(Cookies.get("user")) : null;
+  console.log(userData);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <section className="header-section">
       <div className="header-testting-wrap">
@@ -18,7 +28,11 @@ const Header = () => {
               </div>
               {/* Menu Start */}
               <div className="header-item">
-                <div className="menu-overlay" />
+                <div
+                  className={`menu-overlay ${isMenuOpen ? "active" : ""}`}
+                  // onClick={toggleMenu}
+                />
+
                 <nav className="menu">
                   {/* Mobile Menu Head */}
                   <div className="mobile-menu-head">
@@ -37,7 +51,7 @@ const Header = () => {
                         href="#"
                         className="menu-mitem d-flex align-items-center"
                       >
-                        Home
+                        Home...
                       </a>
                     </li>
                     <li className="menu-item-has-children">
@@ -79,12 +93,16 @@ const Header = () => {
                   <div className="border-right me-3 d-xl-block d-none">
                     <a href="help.html">Help Center</a>
                   </div>
-                  <a href="signup.html" className="cmn--btn">
-                    <span>Sign Up</span>
-                  </a>
+                  {!userData && (
+                    <Link to="/signup" className="cmn--btn">
+                      <span>Sign Up</span>
+                    </Link>
+                  )}
                 </div>
                 {/* Mobile Menu Tigger */}
-                <div className="mobile-menu-trigger">
+                <div className="mobile-menu-trigger" 
+                // onClick={toggleMenu}
+                >
                   <span />
                 </div>
               </div>

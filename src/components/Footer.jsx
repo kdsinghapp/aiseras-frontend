@@ -19,7 +19,7 @@ const Footer = () => {
                       <img src={img1} alt="logo" style={{ width: 150 }} />
                     </a>
                   </div>
-                  <p className="pb__20">
+                  <p className="pb__20" style={{ color: "white" }}>
                     Artificial Intelligence (AI) and Machine Learning (ML) are
                     closely related technologies that enable computers to learn
                     from data and make predictions
@@ -120,15 +120,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer__bottom footer__bottom__two">
-            <ul className="footer__bottom__link">
+            <ul className="footer__bottom__link" style={{ color: "white" }}>
               <li>
-                <a href="support.html">Terms</a>
+                <a href="support.html" style={{textDecoration:"none",color: "white"}}>Terms</a>
               </li>
               <li>
-                <a href="support.html">Privacy</a>
+                <a href="support.html" style={{textDecoration:"none",color: "white"}}>Privacy</a>
               </li>
               <li>
-                <a href="support.html">Cookies</a>
+                <a href="support.html" style={{textDecoration:"none",color: "white"}}>Cookies</a>
               </li>
             </ul>
             <p>© 2025 By Aiseras. All Rights Reserved.</p>
